@@ -1,6 +1,7 @@
 package com.example.thenotesapp.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -54,6 +55,7 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
             notesViewModel.addNote(note)
 
             Toast.makeText(addNoteView.context, "Note saved successfully", Toast.LENGTH_SHORT).show()
+            Log.d("NoteObserve", note.toString())
             view.findNavController().popBackStack(R.id.homeFragment, false)
         } else {
             Toast.makeText(addNoteView.context, "Please enter note title", Toast.LENGTH_SHORT).show()

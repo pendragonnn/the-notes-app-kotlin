@@ -1,6 +1,7 @@
 package com.example.thenotesapp.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -32,7 +33,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -53,7 +53,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
 
     private fun updateUI(note: List<Note>?) {
         if (note != null) {
-            if (note.isEmpty()) {
+            if (note.isNotEmpty()) {
                 binding.emptyNotesImage.visibility = View.GONE
                 binding.homeRecyclerView.visibility = View.VISIBLE
             } else {
@@ -74,6 +74,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         activity?.let {
             notesViewModel.getAllNotes().observe(viewLifecycleOwner) { note ->
                 noteAdapter.differ.submitList(note)
+                Log.d("HomeFragment", note.toString())
                 updateUI(note)
             }
         }

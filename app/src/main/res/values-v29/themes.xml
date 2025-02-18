@@ -1,5 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
     <style name="Base.Theme.TheNotesApp" parent="Theme.MaterialComponents.Light">
         <!--    Primary color    -->
         <item name="colorPrimary">@color/pink</item>
@@ -17,6 +18,4 @@
         <!-- Paksa aplikasi tetap di mode terang -->
         <item name="android:forceDarkAllowed">false</item>
     </style>
-
-    <style name="Theme.TheNotesApp" parent="Base.Theme.TheNotesApp" />
 </resources>
