@@ -19,6 +19,9 @@ import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.FragmentAddNoteBinding
 import com.example.thenotesapp.model.Note
 import com.example.thenotesapp.viewModel.NoteViewModel
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
 
@@ -49,9 +52,13 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
     private fun saveNote(view: View) {
         val noteTitle = binding.addNoteTitle.text.toString().trim()
         val noteDesc = binding.addNoteDesc.text.toString().trim()
+        val currentDateTime = LocalDateTime.now()
+
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd, HH:mm")
+        val noteDate = currentDateTime.format(formatter).toString()
 
         if(noteTitle.isNotEmpty()) {
-            val note = Note(0, noteTitle, noteDesc)
+            val note = Note(0, noteTitle, noteDesc, noteDate)
             notesViewModel.addNote(note)
 
             Toast.makeText(addNoteView.context, "Note saved successfully", Toast.LENGTH_SHORT).show()

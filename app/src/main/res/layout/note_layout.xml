@@ -28,6 +28,17 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/noteDate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="100"
+                android:fontFamily="@font/poppins"
+                android:text="Note Date"
+                android:textColor="#C1BEBE"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/noteDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
