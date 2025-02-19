@@ -37,7 +37,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/emptybkg"
+                android:src="@drawable/emptybkg2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/noteTitle"
                 app:layout_constraintBottom_toBottomOf="@id/noteTitle" />

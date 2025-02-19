@@ -1,4 +1,4 @@
-package com.example.thenotesapp
+package com.example.thenotesapp.ui.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.thenotesapp.database.NoteDao
+import com.example.thenotesapp.R
 import com.example.thenotesapp.database.NoteDatabase
-import com.example.thenotesapp.model.Note
 import com.example.thenotesapp.repository.NoteRepository
 import com.example.thenotesapp.viewModel.NoteViewModel
 import com.example.thenotesapp.viewModel.NoteViewModelFactory

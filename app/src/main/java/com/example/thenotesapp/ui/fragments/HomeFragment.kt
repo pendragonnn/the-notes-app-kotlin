@@ -1,4 +1,4 @@
-package com.example.thenotesapp.fragments
+package com.example.thenotesapp.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -15,7 +15,7 @@ import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.thenotesapp.MainActivity
+import com.example.thenotesapp.ui.activity.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.adapter.NoteAdapter
 import com.example.thenotesapp.databinding.FragmentHomeBinding

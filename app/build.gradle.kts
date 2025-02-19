@@ -80,4 +80,7 @@ dependencies {
 
     // Annotation Processor
     ksp("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
+
+    // Splash Screen
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }

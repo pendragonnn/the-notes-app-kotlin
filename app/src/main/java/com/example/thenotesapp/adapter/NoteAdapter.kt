@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.NoteLayoutBinding
-import com.example.thenotesapp.fragments.HomeFragmentDirections
+import com.example.thenotesapp.ui.fragments.HomeFragmentDirections
 import com.example.thenotesapp.model.Note
 
 class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {

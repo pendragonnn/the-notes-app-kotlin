@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="12dp"
-        tools:context=".fragments.EditNoteFragment">
+        tools:context=".ui.fragments.EditNoteFragment">
 
         <TextView
             android:id="@+id/editNoteHeading"

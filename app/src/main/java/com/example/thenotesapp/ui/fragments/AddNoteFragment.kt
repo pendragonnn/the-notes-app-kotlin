@@ -1,4 +1,4 @@
-package com.example.thenotesapp.fragments
+package com.example.thenotesapp.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -14,12 +14,11 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
-import com.example.thenotesapp.MainActivity
+import com.example.thenotesapp.ui.activity.MainActivity
 import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.FragmentAddNoteBinding
 import com.example.thenotesapp.model.Note
 import com.example.thenotesapp.viewModel.NoteViewModel
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
