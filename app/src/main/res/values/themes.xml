@@ -2,20 +2,21 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TheNotesApp" parent="Theme.MaterialComponents.Light">
         <!--    Primary color    -->
-        <item name="colorPrimary">@color/pink</item>
-        <item name="colorPrimaryVariant">@color/pink</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/yellow</item>
+        <item name="android:textColorPrimary">@color/blue</item>
 
         <!--    Secondary color    -->
-        <item name="colorSecondary">@color/pink</item>
-        <item name="colorSecondaryVariant">@color/pink</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!--    Background Color    -->
+        <item name="android:windowBackground">@color/blue</item>
 
         <!--    Statusbar color    -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-
-        <!-- Paksa aplikasi tetap di mode terang -->
-        <item name="android:forceDarkAllowed">false</item>
     </style>
 
     <style name="Theme.TheNotesApp" parent="Base.Theme.TheNotesApp" />

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.thenotesapp.R
 import com.example.thenotesapp.databinding.NoteLayoutBinding
 import com.example.thenotesapp.fragments.HomeFragmentDirections
 import com.example.thenotesapp.model.Note
@@ -44,6 +45,7 @@ class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         holder.itemBinding.noteTitle.text = currentNote.noteTitle
         holder.itemBinding.noteDesc.text = currentNote.noteDesc
         holder.itemBinding.noteDate.text = currentNote.date
+        holder.itemBinding.noteIcon.setImageResource(iconGenerator())
 
         holder.itemView.setOnClickListener {
             val direction = HomeFragmentDirections.actionHomeFragmentToEditNoteFragment(currentNote)
@@ -51,4 +53,12 @@ class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         }
     }
 
+    private fun iconGenerator(): Int {
+        val noteIconList = listOf(
+            R.drawable.crescent_moon,
+            R.drawable.half_moon,
+            R.drawable.star
+        )
+        return noteIconList.random()
+    }
 }
